@@ -206,12 +206,12 @@ function Profile() {
             🎟️ My Bookings
           </Link>
 
-          <Link
+          {/* <Link
             to="/admin"
             className="block rounded-xl border border-cinema-500/30 bg-cinema-900/20 p-5 font-semibold text-cinema-400 hover:bg-cinema-900/40"
           >
             📊 Admin Dashboard
-          </Link>
+          </Link> */}
 
           <Link
             to="/movies"

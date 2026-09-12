@@ -15,7 +15,7 @@ function Showtimes() {
     useState("");
 
   const [selectedDate, setSelectedDate] =
-    useState("2026-08-28");
+    useState("2026-09-05");
 
   const filteredShowtimes = useMemo(() => {
     return showtimes.filter((item) => {

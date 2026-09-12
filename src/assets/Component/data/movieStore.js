@@ -9,6 +9,14 @@ export function getMovies() {
     );
 
     if (Array.isArray(stored) && stored.length > 0) {
+      // Merge newly added movies from baseMovies if not yet present
+      const storedIds = new Set(stored.map((m) => m.id));
+      const newItems = baseMovies.filter((m) => !storedIds.has(m.id));
+      if (newItems.length > 0) {
+        const merged = [...stored, ...newItems];
+        localStorage.setItem(STORE_KEY, JSON.stringify(merged));
+        return merged;
+      }
       return stored;
     }
   } catch {

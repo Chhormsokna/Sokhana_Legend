@@ -7,8 +7,9 @@ function PromotionCard({ promotion }) {
           alt={promotion.title}
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
           onError={(event) => {
+            event.currentTarget.onerror = null;
             event.currentTarget.src =
-              "https://placehold.co/800x500/18181b/ffffff?text=Promotion";
+              "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80";
           }}
         />
 

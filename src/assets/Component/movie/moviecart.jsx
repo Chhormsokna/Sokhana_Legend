@@ -3,6 +3,7 @@ import {
   Clock,
   Star,
 } from "lucide-react";
+import { handleImageError, FALLBACK_MOVIE } from "../utils/imageFallback";
 
 function MovieCard({ movie }) {
   return (
@@ -13,10 +14,7 @@ function MovieCard({ movie }) {
           src={movie.poster}
           alt={movie.title}
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          onError={(event) => {
-            event.currentTarget.src =
-              "https://placehold.co/500x750/18181b/ffffff?text=Movie";
-          }}
+          onError={(event) => handleImageError(event, FALLBACK_MOVIE)}
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />

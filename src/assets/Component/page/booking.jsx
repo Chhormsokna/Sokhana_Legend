@@ -93,13 +93,27 @@ function Booking() {
     () =>
       showtimes.filter(
         (item) =>
-          (!movieId ||
-            item.movieId === Number(movieId)) &&
-          (!cinemaId ||
-            item.cinemaId === Number(cinemaId))
+          movieId &&
+          cinemaId &&
+          item.movieId === Number(movieId) &&
+          item.cinemaId === Number(cinemaId)
       ),
     [movieId, cinemaId]
   );
+
+  const availableCinemas = useMemo(() => {
+    if (!movieId) {
+      return cinemas;
+    }
+
+    const cinemaIds = new Set(
+      showtimes
+        .filter((item) => item.movieId === Number(movieId))
+        .map((item) => item.cinemaId)
+    );
+
+    return cinemas.filter((item) => cinemaIds.has(item.id));
+  }, [movieId]);
 
   const seatMap = useMemo(
     () =>
@@ -115,6 +129,7 @@ function Booking() {
 
   const handleMovieChange = (value) => {
     setMovieId(value);
+    setCinemaId("");
     setShowtime(null);
     setSeats([]);
   };
@@ -243,12 +258,13 @@ function Booking() {
                   )
                 }
                 className={selectClass}
+                disabled={!movieId}
               >
                 <option value="">
-                  All Cinemas
+                  Select a cinema
                 </option>
 
-                {cinemas.map((item) => (
+                {availableCinemas.map((item) => (
                   <option
                     key={item.id}
                     value={item.id}
@@ -262,9 +278,11 @@ function Booking() {
 
           {availableShowtimes.length === 0 ? (
             <p className="rounded-xl border border-white/10 bg-zinc-900 p-10 text-center text-sm text-gray-500">
-              {movieId
-                ? "No showtimes found for this selection."
-                : "Select a movie to see available showtimes."}
+              {!movieId
+                ? "Select a movie to see available cinemas."
+                : !cinemaId
+                  ? "Select a cinema to see showtimes."
+                  : "No showtimes found for this selection."}
             </p>
           ) : (
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

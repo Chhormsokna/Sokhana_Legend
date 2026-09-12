@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import { ShieldCheck, User } from "lucide-react";
 import { useAuth } from "../context/Authcontext";
 
 function Login() {
@@ -8,22 +8,27 @@ function Login() {
   const { login } = useAuth();
 
   const [email, setEmail] = useState("");
-  const [password, setPassword] =
-    useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const result = login(
-      email,
-      password
-    );
+    const result = login(email, password);
 
     if (result.success) {
-      navigate("/profile");
+      if (result.role === "admin") {
+        navigate("/admin");
+      } else {
+        navigate("/profile");
+      }
     } else {
       alert(result.message);
     }
+  };
+
+  const fillQuick = (demoEmail, demoPass) => {
+    setEmail(demoEmail);
+    setPassword(demoPass);
   };
 
   return (
@@ -34,55 +39,42 @@ function Login() {
             L
           </div>
 
-          <h1 className="mt-5 text-2xl font-black">
-            Welcome Back
-          </h1>
+          <h1 className="mt-5 text-2xl font-black">Welcome Back</h1>
 
-          <p className="mt-2 text-sm text-gray-400">
-            Sign in to manage your bookings.
-          </p>
+          {/* <p className="mt-2 text-sm text-gray-400">
+            Sign in to access your account or admin controls.
+          </p> */}
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="mt-7 space-y-5"
-        >
+        <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <div>
-            <label className="mb-2 block text-sm font-semibold">
-              Email
-            </label>
+            <label className="mb-2 block text-sm font-semibold">Email</label>
 
             <input
               type="email"
               required
               value={email}
-              onChange={(e) =>
-                setEmail(e.target.value)
-              }
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
               className="w-full rounded-lg border border-white/10 bg-black px-4 py-3 text-sm outline-none focus:border-cinema-500"
             />
           </div>
 
           <div>
-            <label className="mb-2 block text-sm font-semibold">
-              Password
-            </label>
+            <label  className="mb-2 block text-sm font-semibold">Password</label>
 
             <input
               type="password"
               required
               value={password}
-              onChange={(e) =>
-                setPassword(e.target.value)
-              }
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
               className="w-full rounded-lg border border-white/10 bg-black px-4 py-3 text-sm outline-none focus:border-cinema-500"
             />
           </div>
 
-          <button className="w-full rounded-lg bg-cinema-600 py-3 font-semibold hover:bg-cinema-700">
-            Login
+          <button className="cinema-button w-full justify-center">
+            Sign In
           </button>
         </form>
 

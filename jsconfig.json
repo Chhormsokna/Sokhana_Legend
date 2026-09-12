@@ -6,7 +6,7 @@
     "allowJs": true,
     "checkJs": false,
     "target": "ES2022",
-    "baseUrl": "."
+    // "baseUrl": "."
   },
   "include": ["src"]
 }

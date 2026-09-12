@@ -6,22 +6,36 @@ const AVATARS_KEY = "legend_avatars";
 
 function readAvatars() {
   try {
-    return (
-      JSON.parse(localStorage.getItem(AVATARS_KEY)) ||
-      {}
-    );
+    return JSON.parse(localStorage.getItem(AVATARS_KEY)) || {};
   } catch {
     return {};
   }
 }
 
+function determineRole(email) {
+  if (!email) return "customer";
+  const normalized = email.trim().toLowerCase();
+  // If email contains "admin" (e.g. admin@legend.com, admin@cinema.com), assign admin role
+  if (normalized.includes("admin") || normalized.startsWith("manager")) {
+    return "admin";
+  }
+  return "customer";
+}
+
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {
     const savedUser = localStorage.getItem("legend_user");
-
-    return savedUser
-      ? JSON.parse(savedUser)
-      : null;
+    if (!savedUser) return null;
+    try {
+      const parsed = JSON.parse(savedUser);
+      // Ensure role exists on stored user
+      if (!parsed.role) {
+        parsed.role = determineRole(parsed.email);
+      }
+      return parsed;
+    } catch {
+      return null;
+    }
   });
 
   const login = (email, password) => {
@@ -33,46 +47,46 @@ export function AuthProvider({ children }) {
     }
 
     const avatars = readAvatars();
+    const role = determineRole(email);
 
     const loggedUser = {
-      id: 1,
-      name: "Legend Customer",
+      id: Date.now(),
+      name: role === "admin" ? "Cinema Administrator" : "Legend Customer",
       email,
       phone: "",
+      role,
       avatar: avatars[email] || null,
     };
 
     setUser(loggedUser);
 
-    localStorage.setItem(
-      "legend_user",
-      JSON.stringify(loggedUser)
-    );
+    localStorage.setItem("legend_user", JSON.stringify(loggedUser));
 
     return {
       success: true,
+      role,
       message: "Login successful.",
     };
   };
 
   const register = (userData) => {
     const avatars = readAvatars();
+    const role = userData.role || determineRole(userData.email);
 
     const newUser = {
       id: Date.now(),
       avatar: avatars[userData.email] || null,
       ...userData,
+      role,
     };
 
     setUser(newUser);
 
-    localStorage.setItem(
-      "legend_user",
-      JSON.stringify(newUser)
-    );
+    localStorage.setItem("legend_user", JSON.stringify(newUser));
 
     return {
       success: true,
+      role,
     };
   };
 
@@ -86,12 +100,9 @@ export function AuthProvider({ children }) {
       const updated = { ...previous, ...updates };
 
       try {
-        localStorage.setItem(
-          "legend_user",
-          JSON.stringify(updated)
-        );
+        localStorage.setItem("legend_user", JSON.stringify(updated));
       } catch {
-        // storage full - keep the in-memory user
+        // storage full
       }
 
       if (previous?.email && updates.avatar) {
@@ -99,12 +110,9 @@ export function AuthProvider({ children }) {
         avatars[previous.email] = updates.avatar;
 
         try {
-          localStorage.setItem(
-            AVATARS_KEY,
-            JSON.stringify(avatars)
-          );
+          localStorage.setItem(AVATARS_KEY, JSON.stringify(avatars));
         } catch {
-          // storage full - avatar kept in memory only
+          // storage full
         }
       }
 
@@ -120,6 +128,7 @@ export function AuthProvider({ children }) {
         register,
         logout,
         updateProfile,
+        isAdmin: user?.role === "admin",
         isAuthenticated: !!user,
       }}
     >

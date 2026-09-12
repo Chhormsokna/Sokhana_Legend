@@ -7,7 +7,7 @@ import {
   Star,
 } from "lucide-react";
 
-import movies from "../data/movie";
+import { getMovies } from "../data/movieStore";
 import cinemas from "../data/cinemas";
 import promotions from "../data/promotions";
 import food from "../data/foods";
@@ -17,6 +17,8 @@ import CinemaCard from "../cinemas/Cinemacard";
 import PromotionCard from "../promotion/promotionscart";
 
 function Home() {
+  const movies = getMovies();
+
   const nowShowing = movies.filter(
     (movie) => movie.status === "now-showing"
   );
@@ -111,7 +113,7 @@ function Home() {
         </div>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {nowShowing.slice(0, 4).map((movie) => (
+          {nowShowing.slice(0, 8).map((movie) => (
             <MovieCard
               key={movie.id}
               movie={movie}
@@ -152,7 +154,7 @@ function Home() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {comingSoon.slice(0, 4).map((movie) => (
+            {comingSoon.slice(0, 8).map((movie) => (
               <MovieCard
                 key={movie.id}
                 movie={movie}
@@ -247,8 +249,8 @@ function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:gap-5">
-            {food.slice(0, 4).map((item) => (
+          <div className="grid grid-cols-2 gap-4 sm:gap-5 sm:grid-cols-3">
+            {food.slice(0, 6).map((item) => (
               <div
                 key={item.id}
                 className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 transition-all duration-300 hover:-translate-y-1 hover:border-cinema-600/40 hover:shadow-xl"
@@ -264,6 +266,12 @@ function Home() {
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 via-transparent to-transparent opacity-60" />
+
+                  {item.category && (
+                    <span className="absolute left-2.5 top-2.5 rounded-full border border-white/10 bg-black/70 px-2 py-0.5 text-[10px] font-semibold text-gray-300 backdrop-blur-md">
+                      {item.category}
+                    </span>
+                  )}
                 </div>
 
                 <div className="p-3 sm:p-4">

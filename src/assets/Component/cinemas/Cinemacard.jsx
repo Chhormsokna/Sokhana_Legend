@@ -13,8 +13,9 @@ function CinemaCard({ cinema }) {
           alt={cinema.name}
           className="h-full w-full object-cover transition duration-500 hover:scale-105"
           onError={(event) => {
+            event.currentTarget.onerror = null;
             event.currentTarget.src =
-              "https://placehold.co/800x500/18181b/ffffff?text=Cinema";
+              "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80";
           }}
         />
 

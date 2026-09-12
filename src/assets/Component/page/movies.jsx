@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-import movies from "../data/movie";
+import { getMovies } from "../data/movieStore";
 import MovieGrid from "../movie/moviegrid";
 import MovieFilter from "../movie/moviefilter";
 import EmptyState from "../common/emptystate";
@@ -9,6 +9,8 @@ function Movies() {
   const [search, setSearch] = useState("");
   const [genre, setGenre] = useState("");
   const [status, setStatus] = useState("");
+
+  const movies = useMemo(() => getMovies(), []);
 
   const filteredMovies = useMemo(() => {
     return movies.filter((movie) => {

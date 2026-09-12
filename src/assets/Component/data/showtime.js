@@ -1,87 +1,41 @@
-const showtimes = [
-  {
-    id: 1,
-    movieId: 1,
-    cinemaId: 1,
-    date: "2026-08-28",
-    time: "10:30 AM",
-    format: "2D",
-    hall: "Hall 1",
-    availableSeats: 32,
-    price: 6
-  },
+import movies from "./movie";
+import cinemas from "./cinemas";
 
-  {
-    id: 2,
-    movieId: 1,
-    cinemaId: 1,
-    date: "2026-08-28",
-    time: "2:30 PM",
-    format: "3D",
-    hall: "Hall 2",
-    availableSeats: 25,
-    price: 8
-  },
-
-  {
-    id: 3,
-    movieId: 1,
-    cinemaId: 1,
-    date: "2026-08-28",
-    time: "7:30 PM",
-    format: "VIP",
-    hall: "VIP Hall",
-    availableSeats: 12,
-    price: 12
-  },
-
-  {
-    id: 4,
-    movieId: 2,
-    cinemaId: 2,
-    date: "2026-08-28",
-    time: "11:00 AM",
-    format: "2D",
-    hall: "Hall 3",
-    availableSeats: 40,
-    price: 6
-  },
-
-  {
-    id: 5,
-    movieId: 3,
-    cinemaId: 3,
-    date: "2026-08-28",
-    time: "4:00 PM",
-    format: "2D",
-    hall: "Hall 1",
-    availableSeats: 28,
-    price: 6
-  },
-
-  {
-    id: 6,
-    movieId: 4,
-    cinemaId: 1,
-    date: "2026-08-28",
-    time: "6:30 PM",
-    format: "2D",
-    hall: "Hall 4",
-    availableSeats: 35,
-    price: 5
-  },
-
-  {
-    id: 7,
-    movieId: 5,
-    cinemaId: 2,
-    date: "2026-08-29",
-    time: "7:00 PM",
-    format: "3D",
-    hall: "Hall 2",
-    availableSeats: 20,
-    price: 8
-  }
+const scheduleDates = [
+  "2026-09-05",
+  // "2026-09-06",
+  // "2026-09-07",
 ];
+
+const scheduleSlots = [
+  { time: "10:30 AM", format: "2D", hall: "Hall 1", price: 6 },
+  { time: "2:30 PM", format: "3D", hall: "Hall 2", price: 8 },
+  { time: "7:30 PM", format: "VIP", hall: "Hall VIP", price: 12 },
+];
+
+const showtimes = [];
+let id = 1;
+
+scheduleDates.forEach((date, dateIndex) => {
+  movies.forEach((movie) => {
+    cinemas.forEach((cinema) => {
+      scheduleSlots.forEach((slot, slotIndex) => {
+        showtimes.push({
+          id,
+          movieId: movie.id,
+          cinemaId: cinema.id,
+          date,
+          time: slot.time,
+          format: slot.format,
+          hall: slot.hall,
+          availableSeats: 40 - ((movie.id + cinema.id + dateIndex + slotIndex) % 16),
+          price: slot.price,
+        });
+
+        id += 1;
+      });
+    });
+  });
+});
 
 export default showtimes;

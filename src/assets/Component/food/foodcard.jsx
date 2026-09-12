@@ -1,5 +1,6 @@
 import { Plus } from "lucide-react";
 import Button from "../common/button";
+import { handleImageError, FALLBACK_FOOD } from "../utils/imageFallback";
 
 function FoodCard({ product, onAdd }) {
   return (
@@ -10,10 +11,7 @@ function FoodCard({ product, onAdd }) {
           src={product.image}
           alt={product.name}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          onError={(event) => {
-            event.currentTarget.src =
-              "https://placehold.co/500x500/18181b/ffffff?text=Food";
-          }}
+          onError={(event) => handleImageError(event, FALLBACK_FOOD)}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent opacity-60" />
 

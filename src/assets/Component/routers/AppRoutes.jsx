@@ -20,7 +20,6 @@ import Profile from "../page/profiles";
 import MyBookings from "../page/mybookings";
 
 import About from "../page/abouts";
-import Admin from "../page/admin";
 import NotFound from "../page/notfound";
 
 function AppRoutes() {
@@ -60,9 +59,6 @@ function AppRoutes() {
 
       {/* About */}
       <Route path="/about" element={<About />} />
-
-      {/* Admin */}
-      <Route path="/admin" element={<Admin />} />
 
       {/* 404 */}
       <Route path="*" element={<NotFound />} />

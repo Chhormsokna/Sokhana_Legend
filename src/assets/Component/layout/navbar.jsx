@@ -38,7 +38,7 @@ function Navbar() {
 
             <div>
               <h1 className="text-lg font-extrabold tracking-wide">
-              KON KHMER
+              SOKHANA 
               </h1>
 
               <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-gray-400">
