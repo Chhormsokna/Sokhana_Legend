@@ -1,10 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./assets/Component/routers/AppRoutes";
-
 import { AuthProvider } from "./assets/Component/context/Authcontext";
 import { BookingProvider } from "./assets/Component/context/BookingContext";
 import { CartProvider } from "./assets/Component/context/cartcontext";
-
 import Navbar from "./assets/Component/layout/navbar";
 import Footer from "./assets/Component/layout/footer";
 

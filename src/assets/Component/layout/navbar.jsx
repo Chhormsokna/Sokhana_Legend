@@ -33,12 +33,12 @@ function Navbar() {
             onClick={() => setMobileOpen(false)}
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cinema-600 font-black">
-              K
+              C
             </div>
 
             <div>
               <h1 className="text-lg font-extrabold tracking-wide">
-              SOKHANA 
+              GENZ-Y 
               </h1>
 
               <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-gray-400">

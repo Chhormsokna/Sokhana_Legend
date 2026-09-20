@@ -2,56 +2,55 @@ const movies = [
   {
     id: 1,
     title: "Jumanji: Welcome to the Jungle",
-     poster: "https://i.pinimg.com/1200x/ea/93/ab/ea93aba8a40994bca40c5bf45c1ec0be.jpg",
+    poster: "https://i.pinimg.com/1200x/ea/93/ab/ea93aba8a40994bca40c5bf45c1ec0be.jpg",
     banner: "https://i.pinimg.com/1200x/ea/93/ab/ea93aba8a40994bca40c5bf45c1ec0be.jpg",
-    genre: "Action",
-    duration: "3h 10m",
-    rating: "8.5",
+    genre: "Adventure",
+    duration: "1h 59m",
+    rating: "7.0",
     language: "English",
     ageRating: "PG-13",
     releaseDate: "2025-12-18",
     status: "now-showing",
-    director: "James Cameron",
-    cast: ["Sam Worthington", "Zoe Saldaña"],
+    director: "Jake Kasdan",
+    cast: ["Dwayne Johnson", "Kevin Hart", "Jack Black", "Karen Gillan"],
     description:
-      "Jake Sully and his family face a new threat on Pandora: the Ash People, a violent Na'vi clan led by Varang."
+      "Four teenagers are sucked into a magical video game, and the only way they can escape is to work together to finish the game."
   },
 
   {
     id: 2,
-    title: "Avatar",
+    title: "Titanic",
     poster: "https://i.pinimg.com/1200x/d5/9c/2a/d59c2afe90c9fa162dcb4d1813c60ff8.jpg",
     banner: "https://i.pinimg.com/1200x/d5/9c/2a/d59c2afe90c9fa162dcb4d1813c60ff8.jpg",
-   
-    genre: "Action",
-    duration: "1h 58m",
-    rating: "7.3",
+    genre: "Romance",
+    duration: "3h 14m",
+    rating: "7.9",
     language: "English",
     ageRating: "PG-13",
     releaseDate: "2025-02-14",
     status: "now-showing",
-    director: "Julius Onah",
-    cast: ["Anthony Mackie", "Harrison Ford"],
+    director: "James Cameron",
+    cast: ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane"],
     description:
-      "Sam Wilson investigates a global conspiracy involving the newly elected U.S. President Thaddeus Ross."
+      "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic."
   },
 
   {
     id: 3,
-    title: "Titanic",
+    title: "Avatar",
     poster: "https://i.pinimg.com/736x/a4/a7/1f/a4a71f56078983cdf61558546ba38536.jpg",
     banner: "https://i.pinimg.com/736x/a4/a7/1f/a4a71f56078983cdf61558546ba38536.jpg",
-    genre: "Action",
-    duration: "2h 09m",
-    rating: "7.7",
+    genre: "Sci-Fi",
+    duration: "2h 42m",
+    rating: "7.9",
     language: "English",
     ageRating: "PG-13",
     releaseDate: "2025-07-11",
     status: "now-showing",
-    director: "James Gunn",
-    cast: ["David Corenswet", "Rachel Brosnahan"],
+    director: "James Cameron",
+    cast: ["Sam Worthington", "Zoe Saldaña", "Sigourney Weaver"],
     description:
-      "Superman must win back public support after intervening in an international conflict orchestrated by Lex Luthor."
+      "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home."
   },
 
   {
@@ -59,17 +58,17 @@ const movies = [
     title: "Pirates of the Caribbean: The Curse of the Black Pearl",
     poster: "https://i.pinimg.com/736x/ba/72/ae/ba72ae522dd15dbb939dcc1a7886594c.jpg",
     banner: "https://i.pinimg.com/736x/ba/72/ae/ba72ae522dd15dbb939dcc1a7886594c.jpg",
-    genre: "Sci-Fi",
-    duration: "2h 13m",
-    rating: "7.0",
+    genre: "Action",
+    duration: "2h 23m",
+    rating: "8.1",
     language: "English",
     ageRating: "PG-13",
     releaseDate: "2025-07-02",
     status: "now-showing",
-    director: "Gareth Edwards",
-    cast: ["Scarlett Johansson", "Jonathan Bailey"],
+    director: "Gore Verbinski",
+    cast: ["Johnny Depp", "Geoffrey Rush", "Orlando Bloom", "Keira Knightley"],
     description:
-      "A team travels to a former island research facility to extract DNA samples from three gigantic dinosaur species."
+      "Blacksmith Will Turner teams up with eccentric pirate Captain Jack Sparrow to save his love, Elizabeth Swann, from cursed undead pirates."
   },
 
   {
@@ -77,17 +76,17 @@ const movies = [
     title: "Harry Potter and the Philosopher's Stone",
     poster: "https://i.pinimg.com/736x/dd/ec/78/ddec7859b8b3a17e93efa61834b5d748.jpg",
     banner: "https://i.pinimg.com/736x/dd/ec/78/ddec7859b8b3a17e93efa61834b5d748.jpg",
-    genre: "Sport",
-    duration: "2h 36m",
-    rating: "8.1",
+    genre: "Fantasy",
+    duration: "2h 32m",
+    rating: "7.6",
     language: "English",
-    ageRating: "PG-13",
+    ageRating: "PG",
     releaseDate: "2025-06-27",
     status: "now-showing",
-    director: "Joseph Kosinski",
-    cast: ["Brad Pitt", "Damson Idris"],
+    director: "Chris Columbus",
+    cast: ["Daniel Radcliffe", "Rupert Grint", "Emma Watson"],
     description:
-      "A Formula One racing driver returns after 30 years to save his former teammate's underdog team from collapse."
+      "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world."
   },
 
   {
@@ -95,17 +94,17 @@ const movies = [
     title: "Fantastic Beasts: The Secrets of Dumbledore",
     poster: "https://i.pinimg.com/736x/cb/e0/d9/cbe0d93aeaf0807a15c4e7f9028f1205.jpg",
     banner: "https://i.pinimg.com/736x/cb/e0/d9/cbe0d93aeaf0807a15c4e7f9028f1205.jpg",
-    genre: "Family",
-    duration: "1h 47m",
-    rating: "7.1",
+    genre: "Fantasy",
+    duration: "2h 22m",
+    rating: "6.2",
     language: "English",
-    ageRating: "PG",
+    ageRating: "PG-13",
     releaseDate: "2025-05-23",
     status: "now-showing",
-    director: "Dean Fleischer Camp",
-    cast: ["Maia Kealoha", "Chris Sanders"],
+    director: "David Yates",
+    cast: ["Eddie Redmayne", "Jude Law", "Mads Mikkelsen"],
     description:
-      "A live-action remake of Disney's animated classic about a lonely Hawaiian girl and her new alien friend Stitch."
+      "Professor Albus Dumbledore entrusts Newt Scamander to lead an intrepid team of wizards and witches to stop the dark wizard Gellert Grindelwald."
   },
 
   {
@@ -114,88 +113,88 @@ const movies = [
     poster: "https://i.pinimg.com/736x/f8/84/c6/f884c6a401f574ce5e3dcee2e8ae5b99.jpg",
     banner: "https://i.pinimg.com/736x/f8/84/c6/f884c6a401f574ce5e3dcee2e8ae5b99.jpg",
     genre: "Action",
-    duration: "2h 49m",
-    rating: "7.9",
+    duration: "2h 12m",
+    rating: "7.4",
     language: "English",
     ageRating: "PG-13",
     releaseDate: "2025-05-23",
     status: "now-showing",
-    director: "Christopher McQuarrie",
-    cast: ["Tom Cruise", "Hayley Atwell"],
+    director: "Destin Daniel Cretton",
+    cast: ["Simu Liu", "Awkwafina", "Tony Leung"],
     description:
-      "Ethan Hunt and his IMF team race to stop a rogue artificial intelligence from destroying all of humanity."
+      "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization."
   },
 
   {
     id: 8,
-    title: "The Bad Guys",
+    title: "Doctor Strange in the Multiverse of Madness",
     poster: "https://i.pinimg.com/1200x/58/c4/30/58c43096916cebd2260e6a62f1ef91ad.jpg",
     banner: "https://i.pinimg.com/1200x/58/c4/30/58c43096916cebd2260e6a62f1ef91ad.jpg",
     genre: "Fantasy",
-    duration: "2h 05m",
-    rating: "7.8",
+    duration: "2h 06m",
+    rating: "6.9",
     language: "English",
-    ageRating: "PG",
+    ageRating: "PG-13",
     releaseDate: "2025-06-13",
     status: "coming-soon",
-    director: "Dean DeBlois",
-    cast: ["Mason Thames", "Nico Parker"],
+    director: "Sam Raimi",
+    cast: ["Benedict Cumberbatch", "Elizabeth Olsen", "Chiwetel Ejiofor"],
     description:
-      "A live-action remake of the beloved animated classic about a young Viking who befriends a dragon."
+      "Doctor Strange teams up with a mysterious teenage girl from his dreams who can travel across multiverses to battle multiple threats."
   },
 
   {
     id: 9,
-    title: "Doctor Strange",
+    title: "The Bad Guys 2",
     poster: "https://i.pinimg.com/736x/51/9f/00/519f004a940327b4db5ac285506449f2.jpg",
     banner: "https://i.pinimg.com/736x/51/9f/00/519f004a940327b4db5ac285506449f2.jpg",
-    genre: "Action",
-    duration: "2h 07m",
-    rating: "7.4",
+    genre: "Animation",
+    duration: "1h 44m",
+    rating: "7.5",
     language: "English",
-    ageRating: "PG-13",
+    ageRating: "PG",
     releaseDate: "2025-04-30",
     status: "coming-soon",
-    director: "Jake Schreier",
-    cast: ["Florence Pugh", "Sebastian Stan"],
+    director: "Pierre Perifel",
+    cast: ["Sam Rockwell", "Marc Maron", "Awkwafina"],
     description:
-      "A group of antiheroes is caught in a trap and forced to work together on a mission that uncovers their pasts."
+      "The reformed Bad Guys are pulled out of retirement by a cunning new squad of criminals for one last high-stakes caper."
   },
 
   {
     id: 10,
-    title: "Masha and the Bear",
+    title: "ZOOTOPIA",
     poster: "https://i.pinimg.com/736x/b3/e7/51/b3e751685d5e6244b11f8d7f0ed889a6.jpg",
     banner: "https://i.pinimg.com/736x/b3/e7/51/b3e751685d5e6244b11f8d7f0ed889a6.jpg",
-    genre: "Sci-Fi",
-    duration: "1h 55m",
-    rating: "7.6",
+    genre: "Animation",
+    duration: "1h 48m",
+    rating: "8.0",
     language: "English",
-    ageRating: "PG-13",
+    ageRating: "PG",
     releaseDate: "2025-07-25",
     status: "coming-soon",
-    director: "Matt Shakman",
-    cast: ["Pedro Pascal", "Vanessa Kirby"],
+    director: "Byron Howard, Rich Moore",
+    cast: ["Ginnifer Goodwin", "Jason Bateman", "Idris Elba"],
     description:
-      "The Fantastic Four must protect their retro-futuristic world from the planet-devouring cosmic being Galactus."
+      "In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy."
   },
 
   {
     id: 11,
-    title: "Zootopia",
+    title: "MASHA AND THE BEAR",
     poster: "https://i.pinimg.com/1200x/7e/2b/ab/7e2bab3a7402c053648f2a3ecb85991d.jpg",
     banner: "https://i.pinimg.com/1200x/7e/2b/ab/7e2bab3a7402c053648f2a3ecb85991d.jpg",
-    genre: "Horror",
-    duration: "1h 55m",
-    rating: "7.5",
+    genre: "Animation",
+    duration: "1h 15m",
+    rating: "7.2",
     language: "English",
-    ageRating: "R",
+    ageRating: "G",
     releaseDate: "2025-06-20",
     status: "coming-soon",
-    director: "Danny Boyle",
-    cast: ["Jodie Comer", "Aaron Taylor-Johnson"],
+    director: "Oleg Kuzovkov",
+    cast: ["Alina Kukushkina", "Boris Kutnevich"],
     description:
-      "A young boy journeys through a post-apocalyptic world to find a cure for his sick mother."
+      "Heartwarming forest adventures of a kind-hearted retired circus Bear and an energetic, mischievous little girl named Masha."
   },
 
   {
@@ -203,17 +202,17 @@ const movies = [
     title: "Madagascar 4",
     poster: "https://i.pinimg.com/1200x/c7/45/e6/c745e669dfa7fac84af97ae79014fb19.jpg",
     banner: "https://i.pinimg.com/1200x/c7/45/e6/c745e669dfa7fac84af97ae79014fb19.jpg",
-    genre: "Action",
-    duration: "2h 05m",
-    rating: "7.2",
+    genre: "Animation",
+    duration: "1h 35m",
+    rating: "7.0",
     language: "English",
-    ageRating: "R",
+    ageRating: "PG",
     releaseDate: "2025-06-06",
     status: "coming-soon",
-    director: "Len Wiseman",
-    cast: ["Ana de Armas", "Keanu Reeves"],
+    director: "Eric Darnell, Tom McGrath",
+    cast: ["Ben Stiller", "Chris Rock", "David Schwimmer", "Jada Pinkett Smith"],
     description:
-      "Ballerina-assassin Eve MaCarro takes on an army of killers as she avenges the death of her father."
+      "Alex the lion and his beloved zoo friends embark on another wild and hilarious globe-trotting adventure."
   },
 
   {
@@ -221,53 +220,53 @@ const movies = [
     title: "Kung Fu Panda 3",
     poster: "https://i.pinimg.com/736x/ca/4e/d5/ca4ed55a6e02e3969f692d1eb954af89.jpg",
     banner: "https://i.pinimg.com/736x/ca/4e/d5/ca4ed55a6e02e3969f692d1eb954af89.jpg",
-    genre: "Adventure",
-    duration: "1h 41m",
-    rating: "6.8",
+    genre: "Animation",
+    duration: "1h 35m",
+    rating: "7.1",
     language: "English",
     ageRating: "PG",
     releaseDate: "2025-04-04",
     status: "now-showing",
-    director: "Jared Hess",
-    cast: ["Jason Momoa", "Jack Black"],
+    director: "Jennifer Yuh Nelson, Alessandro Carloni",
+    cast: ["Jack Black", "Bryan Cranston", "Dustin Hoffman", "Angelina Jolie"],
     description:
-      "Four unlikely misfits enter a blocky world of imagination and must master it to find their way home."
+      "Continuing his legendary adventures of awesomeness, Po must train a village of clumsy pandas to defeat the supernatural warrior Kai."
   },
 
   {
     id: 14,
-    title: "Ne Zha: The Journey to the World Games",
+    title: "Ne Zha: Birth of the Demon Child",
     poster: "https://i.pinimg.com/736x/1a/db/c1/1adbc1ca1d1b377dd0f4bf24e454b515.jpg",
     banner: "https://i.pinimg.com/736x/1a/db/c1/1adbc1ca1d1b377dd0f4bf24e454b515.jpg",
-    genre: "Horror",
-    duration: "2h 17m",
-    rating: "8.2",
+    genre: "Animation",
+    duration: "1h 50m",
+    rating: "7.4",
     language: "English",
-    ageRating: "R",
+    ageRating: "PG-13",
     releaseDate: "2025-04-18",
     status: "now-showing",
-    director: "Ryan Coogler",
-    cast: ["Michael B. Jordan", "Hailee Steinfeld"],
+    director: "Jiaozi",
+    cast: ["Lu Yanting", "Joseph", "Han Mo"],
     description:
-      "Twin brothers return to their hometown hoping for a fresh start, only to uncover a far darker evil."
+      "Born with unique celestial powers, a young boy named Ne Zha must choose between good and evil in order to break a dark prophecy and save his people."
   },
 
   {
     id: 15,
-    title: "Jungle Cruise",
+    title: "JUNGLE CRUISE",
     poster: "https://i.pinimg.com/736x/c8/67/0f/c8670fbaaf891da83d46158bf1ca6f20.jpg",
     banner: "https://i.pinimg.com/736x/c8/67/0f/c8670fbaaf891da83d46158bf1ca6f20.jpg",
-    genre: "Horror",
-    duration: "1h 50m",
-    rating: "7.1",
+    genre: "Adventure",
+    duration: "2h 07m",
+    rating: "6.6",
     language: "English",
-    ageRating: "R",
+    ageRating: "PG-13",
     releaseDate: "2025-05-16",
     status: "now-showing",
-    director: "Zach Lipovsky & Adam Stein",
-    cast: ["Kaitlyn Santa Juana", "Teo Briones"],
+    director: "Jaume Collet-Serra",
+    cast: ["Dwayne Johnson", "Emily Blunt", "Edgar Ramírez"],
     description:
-      "A college student haunted by a recurring vision races to save her family from a deadly inherited fate."
+      "Wisecracking skipper Frank Wolff and intrepid researcher Dr. Lily Houghton journey down the Amazon in search of an ancient tree that holds the power to heal."
   },
 
   {
@@ -329,7 +328,7 @@ const movies = [
     title: "The Mummy",
     poster: "https://i.pinimg.com/736x/b3/c0/31/b3c031d9cfd73066bef03737012b9419.jpg",
     banner: "https://i.pinimg.com/736x/b3/c0/31/b3c031d9cfd73066bef03737012b9419.jpg",
-    genre: "Horror",
+    genre: "Adventure",
     duration: "2h 05m",
     rating: "7.6",
     language: "English",
@@ -344,10 +343,10 @@ const movies = [
 
   {
     id: 20,
-    title: "TRON: Ares",
-    poster: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80",
+    title: "JUMANJI: THE NEXT LEVEL",
+    poster: "https://i.pinimg.com/736x/d5/41/26/d541269feb4ec440e6e7299e3f53d43e.jpg",
     banner: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-    genre: "Sci-Fi",
+    genre: "adventure",
     duration: "2h 00m",
     rating: "7.4",
     language: "English",
@@ -362,10 +361,10 @@ const movies = [
 
   {
     id: 21,
-    title: "Wicked: For Good",
-    poster: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=700&q=80",
+    title: "Wicked: JUNGLE CRUISE2",
+    poster: "https://i.pinimg.com/1200x/7a/e3/13/7ae31317828fef6d96a67f88699450d9.jpg",
     banner: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1600&q=80",
-    genre: "Fantasy",
+    genre: "Adventure",
     duration: "2h 18m",
     rating: "7.8",
     language: "English",
@@ -380,10 +379,10 @@ const movies = [
 
   {
     id: 22,
-    title: "Zootopia 2",
-    poster: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=700&q=80",
+    title: "AVATAR3",
+    poster: "https://i.pinimg.com/736x/a4/11/de/a411deea48ea7ed7eb437fad17dd7439.jpg",
     banner: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
-    genre: "Animation",
+    genre: "ACTION",
     duration: "1h 48m",
     rating: "7.9",
     language: "English",
@@ -398,10 +397,10 @@ const movies = [
 
   {
     id: 23,
-    title: "Five Nights at Freddy's 2",
-    poster: "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=700&q=80",
+    title: "After You 2",
+    poster: "https://i.pinimg.com/1200x/51/8d/1a/518d1a8c0e71ecfa92440f7cbd5ee632.jpg",
     banner: "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1600&q=80",
-    genre: "Horror",
+    genre: "Romance",
     duration: "1h 58m",
     rating: "7.0",
     language: "English",
@@ -416,10 +415,10 @@ const movies = [
 
   {
     id: 24,
-    title: "The Housemaid",
-    poster: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80",
+    title: "Accidence in Love",
+    poster: "https://i.pinimg.com/736x/f4/f9/03/f4f903852a9d4dc0246eaaeabb9d36b4.jpg",
     banner: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80",
-    genre: "Thriller",
+    genre: "Romance",
     duration: "1h 55m",
     rating: "7.3",
     language: "English",
@@ -434,10 +433,10 @@ const movies = [
 
   {
     id: 25,
-    title: "Deadpool & Wolverine",
-    poster: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=700&q=80",
+    title: "ATLANTIS: THE LOST EMPIRE",
+    poster: "https://i.pinimg.com/1200x/74/27/94/7427949934088901dd206d10adcf8114.jpg",
     banner: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1600&q=80",
-    genre: "Action",
+    genre: "Fantasy",
     duration: "2h 08m",
     rating: "8.1",
     language: "English",
@@ -452,10 +451,10 @@ const movies = [
 
   {
     id: 26,
-    title: "Dune: Part Two",
-    poster: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=700&q=80",
+    title: "BEN10",
+    poster: "https://i.pinimg.com/1200x/b6/26/94/b626945f9a13cf6fcfd917777a103654.jpg",
     banner: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1600&q=80",
-    genre: "Sci-Fi",
+    genre: "Fantasy",
     duration: "2h 46m",
     rating: "8.6",
     language: "English",
@@ -470,10 +469,10 @@ const movies = [
 
   {
     id: 27,
-    title: "Inside Out 2",
-    poster: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=80",
+    title: "THE NUN",
+    poster: "https://i.pinimg.com/736x/92/2a/70/922a70e6a129644df8731ac3840789a9.jpg",
     banner: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80",
-    genre: "Animation",
+    genre: "Horror",
     duration: "1h 36m",
     rating: "7.8",
     language: "English",
@@ -488,10 +487,10 @@ const movies = [
 
   {
     id: 28,
-    title: "Gladiator II",
-    poster: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=700&q=80",
+    title: "DEADOUT",
+    poster: "https://i.pinimg.com/736x/ad/2d/39/ad2d39b3fe13390181f4d851875a0dd3.jpg",
     banner: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1600&q=80",
-    genre: "Action",
+    genre: "Horror",
     duration: "2h 28m",
     rating: "7.7",
     language: "English",
@@ -506,10 +505,10 @@ const movies = [
 
   {
     id: 29,
-    title: "Oppenheimer: 70mm Special",
-    poster: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=700&q=80",
+    title: "THE MONSTER HUNTER2",
+    poster: "https://i.pinimg.com/736x/ef/8b/0d/ef8b0dfde92391ae7e585fb43dfa4c2e.jpg",
     banner: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=1600&q=80",
-    genre: "Drama",
+    genre: "Horror",
     duration: "3h 00m",
     rating: "8.9",
     language: "English",
@@ -524,10 +523,27 @@ const movies = [
 
   {
     id: 30,
-    title: "Spider-Man: Beyond the Spider-Verse",
-    poster: "https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=700&q=80",
+    title: "TRAIN TO BUSAN2",
+    poster: "https://i.pinimg.com/1200x/93/84/b4/9384b4bc8ecb9dff410adeef9dc0e28e.jpg",
     banner: "https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1600&q=80",
-    genre: "Animation",
+    genre: "Horror",
+    duration: "2h 15m",
+    rating: "8.8",
+    language: "English",
+    ageRating: "PG",
+    releaseDate: "2026-03-27",
+    status: "coming-soon",
+    director: "Joaquim Dos Santos",
+    cast: ["Shameik Moore", "Hailee Steinfeld"],
+    description:
+      "Miles Morales journeys across the multiverse alongside Gwen Stacy to rewrite his own destiny and save every Spider-Hero."
+  },
+  {
+    id: 31,
+    title: "The Dear of You",
+    poster: "https://i.pinimg.com/1200x/62/65/d6/6265d66ee93d027cd8279b8628ffbc3c.jpg",
+    banner: "https://i.pinimg.com/1200x/62/65/d6/6265d66ee93d027cd8279b8628ffbc3c.jpg",
+    genre: "Drama",
     duration: "2h 15m",
     rating: "8.8",
     language: "English",
@@ -542,3 +558,4 @@ const movies = [
 ];
 
 export default movies;
+ 
